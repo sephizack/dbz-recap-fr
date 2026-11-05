@@ -80,6 +80,26 @@ conserve son emblème. Les légendes tiennent compte du contenu réel des visuel
 
 ## Hébergement
 
+### Aperçus de partage
+
+Le HTML contient les métadonnées Open Graph (WhatsApp, Facebook, etc.) et
+Twitter Card : titre, description en français et image JPEG dédiée de
+1 200 × 630 pixels, [images/partage-dragon-ball.jpg](./images/partage-dragon-ball.jpg).
+Elles sont disponibles sans JavaScript et ne changent pas l'affichage du guide.
+
+L'adresse publique configurée est
+<https://public.sephizack.myds.me/apps/dbz-recap-fr/>. En cas de changement
+d'hébergement, mettre à jour les URL absolues dans la balise `canonical` et les
+métadonnées `og:url`, `og:image`, `og:image:secure_url` et `twitter:image`.
+Le HTML et le JPEG doivent être accessibles publiquement en HTTPS, sans
+authentification ni blocage des robots de partage.
+
+WhatsApp choisit la présentation de l'aperçu et peut conserver une ancienne
+version en cache. Après publication, tester dans un nouveau message avec
+`https://public.sephizack.myds.me/apps/dbz-recap-fr/?v=2` pour demander un
+aperçu avec une URL distincte. Un message déjà envoyé ne sera pas forcément
+actualisé.
+
 Publier [index.html](./index.html), [styles.css](./styles.css),
 [script.js](./script.js) et le dossier [images/](./images/) sur un hébergement
 statique, en conservant les noms et chemins relatifs, y compris le sous-dossier
