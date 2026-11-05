@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111723">
+  <meta name="description" content="Un petit guide illustré pour découvrir Dragon Ball et Dragon Ball Z, des origines aux sagas de Freezer, Cell et Boo. Six minutes, zéro prérequis.">
+  <title>Dragon Ball · Le petit guide de découverte</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#origines">Aller au récit</a>
+  <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="star" viewBox="0 0 24 24">
+        <path d="m12 1 3.2 6.9 7.5.9-5.5 5.2 1.5 7.5L12 17.8l-6.7 3.7 1.5-7.5L1.3 8.8l7.5-.9Z" fill="currentColor"/>
+      </symbol>
+      <symbol id="ball" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="46" fill="#ffad43" stroke="#ffe1a1" stroke-width="3"/>
+        <path d="M20 41a32 32 0 0 1 27-23" fill="none" stroke="#fff0c6" stroke-width="5" stroke-linecap="round"/>
+        <g fill="#a63824">
+          <path d="m37 31 3 6 6.5 1-4.7 4.5 1 6.5-5.8-3-5.8 3 1-6.5-4.7-4.5 6.5-1Z"/>
+          <path d="m63 31 3 6 6.5 1-4.7 4.5 1 6.5-5.8-3-5.8 3 1-6.5-4.7-4.5 6.5-1Z"/>
+          <path d="m37 55 3 6 6.5 1-4.7 4.5 1 6.5-5.8-3-5.8 3 1-6.5-4.7-4.5 6.5-1Z"/>
+          <path d="m63 55 3 6 6.5 1-4.7 4.5 1 6.5-5.8-3-5.8 3 1-6.5-4.7-4.5 6.5-1Z"/>
+        </g>
+      </symbol>
+      <symbol id="spark" viewBox="0 0 32 32">
+        <path d="m18 2-12 17h9l-1 11 12-18h-9Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="crown" viewBox="0 0 32 32">
+        <path d="m5 9 7 7 4-11 4 11 7-7-3 16H8Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 29h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="sprout" viewBox="0 0 32 32">
+        <path d="M16 29V14M16 20C4 21 3 12 3 7c8-1 13 3 13 13Zm0-6C16 4 22 2 29 3c0 8-5 12-13 11Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="tool" viewBox="0 0 32 32">
+        <path d="M20 3a9 9 0 0 0-9 12L3 24a3 3 0 0 0 5 5l9-9A9 9 0 0 0 29 9l-6 5-5-5 5-6Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="heart" viewBox="0 0 32 32">
+        <path d="M16 28 4 16C-4 7 10-2 16 8 22-2 36 7 28 16Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="orbit" viewBox="0 0 32 32">
+        <circle cx="16" cy="16" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="16" ry="6" transform="rotate(-35 16 16)" fill="none" stroke="currentColor" stroke-width="2"/>
+      </symbol>
+      <symbol id="clock" viewBox="0 0 32 32">
+        <path d="M8 3h16M8 29h16M10 3v6l12 14v6M22 3v6L10 23v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#accueil" aria-label="Dragon Ball, revenir au début">
+        <svg aria-hidden="true" viewBox="0 0 100 100"><use href="#ball"/></svg>
+        DRAGON BALL<br>POUR TOI
+      </a>
+      <nav class="chapter-nav" aria-label="Les quatre chapitres">
+        <a href="#origines" aria-label="Chapitre 1 : les origines">01</a>
+        <a href="#saiyans" aria-label="Chapitre 2 : les Saiyans">02</a>
+        <a href="#namek" aria-label="Chapitre 3 : Namek et Freezer">03</a>
+        <a href="#suite" aria-label="Chapitre 4 : Cell et Boo">04</a>
+      </nav>
+      <span class="top-note">6 minutes · zéro prérequis</span>
+    </div>
+    <div class="reading-track" role="progressbar" aria-label="Progression de lecture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="reading-fill"></div>
+    </div>
+  </header>
+
+  <main id="accueil">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <div class="gift"><span aria-hidden="true">♡</span> Une histoire à découvrir à deux</div>
+            <p class="eyebrow">Le guide de survie pour les non-initiés</p>
+            <h1>Il était une fois…<br><em>Dragon Ball.</em></h1>
+            <p class="subtitle">L'univers de Dragon Ball,<br>raconté simplement.</p>
+            <p class="lead">Un petit garçon à queue de singe. Des amis improbables. Des adversaires beaucoup trop puissants. Promis : tu n'as pas besoin de rattraper 291 épisodes.</p>
+            <div class="meta"><span><b>~6 min</b> ensemble</span><span><b>4</b> chapitres</span><span><b>0</b> connaissance requise</span></div>
+          </div>
+          <figure class="cover">
+            <img src="images/00-couverture-goku.webp" alt="Goku enfant, Tortue Géniale et Bulma au bord de l'eau" width="590" height="331" fetchpriority="high">
+            <figcaption class="cover-caption"><span>De la Terre<br><strong>jusqu'aux étoiles.</strong></span><span>Édition découverte · 01</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter wrap" id="origines" aria-labelledby="origines-title" data-chapter>
+      <div class="chapter-head"><span class="chapter-number" aria-hidden="true">01</span><p class="eyebrow">Les origines · Dragon Ball</p><span class="duration">~1 minute</span></div>
+      <h2 class="chapter-title" id="origines-title">Un garçon, sept boules…<br>et beaucoup d'appétit.</h2>
+      <p class="deck">Au départ, ce n'est pas une guerre dans l'espace. C'est une aventure un peu folle sur Terre.</p>
+      <div class="story-grid">
+        <div class="prose" data-reading>
+          <p><strong>Son Goku</strong> est un petit garçon à queue de singe, très fort et très naïf. Il vit dans les montagnes avec une étrange boule orange héritée de son grand-père.</p>
+          <p><strong>Bulma</strong>, une jeune inventrice, l'entraîne à la recherche des <strong>sept Dragon Balls</strong>. Réunies, elles invoquent <strong>Shenron</strong>, un dragon qui exauce un vœu. L'aventure commence !</p>
+        </div>
+        <figure class="scene">
+          <img src="images/01-les-7-dragon-balls.webp" alt="Les sept Dragon Balls, les boules magiques à étoiles" width="835" height="469" loading="lazy" decoding="async">
+          <figcaption><strong>La quête originelle.</strong> Réunir les sept boules permet d'appeler Shenron et de faire un vœu.</figcaption>
+        </figure>
+        <div class="prose" data-reading>
+          <p>Goku apprend les arts martiaux avec <strong>Krilin</strong>, son meilleur ami, auprès de <strong>Tortue Géniale</strong>. En grandissant, il affronte notamment <strong>Piccolo</strong>, un rival à la peau verte. Il épouse <strong>Chichi</strong> et devient le père de <strong>Gohan</strong>.</p>
+        </div>
+        <div>
+          <figure class="scene">
+            <img src="images/02-goku-bulma-roshi.webp" alt="Goku enfant avec Bulma et Tortue Géniale" width="590" height="331" loading="lazy" decoding="async">
+            <figcaption><strong>Les premières rencontres.</strong> Bulma lance l'aventure ; Tortue Géniale apprend à Goku les arts martiaux.</figcaption>
+          </figure>
+          <details class="facts"><summary>Deux mots utiles : « ki » et « Kamé Hamé Ha »</summary><p>Le <strong>ki</strong>, c'est l'énergie intérieure des combattants. Le <strong>Kamé Hamé Ha</strong> est la célèbre vague d'énergie que lance Goku.</p></details>
+        </div>
+      </div>
+      <aside class="takeaway" data-reading><h3>Ce qu'il faut retenir</h3><p>Goku aime manger, progresser et protéger ses proches. Les Dragon Balls lancent les aventures… et peuvent parfois réparer les catastrophes.</p></aside>
+    </section>
+
+    <section class="chapter wrap" id="saiyans" aria-labelledby="saiyans-title" data-chapter>
+      <div class="chapter-head"><span class="chapter-number" aria-hidden="true">02</span><p class="eyebrow">Les Saiyans · Dragon Ball Z</p><span class="duration">~1 minute</span></div>
+      <h2 class="chapter-title" id="saiyans-title">Surprise : Goku<br>ne vient pas de la Terre.</h2>
+      <p class="deck">Quelques années plus tard, un visiteur venu de l'espace fait exploser toutes les certitudes.</p>
+      <div class="step-list" data-reading>
+        <div class="beat story-grid">
+          <div class="prose">
+            <h3>Un frère et une très mauvaise nouvelle</h3>
+            <p><strong>Raditz</strong>, un guerrier venu de l'espace, révèle qu'il est le frère de Goku. Tous deux sont des <strong>Saiyans</strong> : Goku est né sur une autre planète, mais a grandi sur Terre et choisi de la protéger.</p>
+          </div>
+          <figure class="scene">
+            <img src="images/03-arrivee-raditz.webp" alt="Raditz, le frère saiyan de Goku, arrive sur Terre" width="1200" height="675" loading="lazy" decoding="async">
+            <figcaption><strong>Un frère venu de l'espace.</strong> Raditz révèle les origines saiyans de Goku.</figcaption>
+          </figure>
+          <div class="prose">
+            <p>Raditz enlève Gohan. Pour le sauver, Goku s'allie à Piccolo, son ancien ennemi. Le combat révèle la force étonnante de Gohan, mais leur victoire a un prix : <strong>Goku meurt en sauvant son fils.</strong></p>
+          </div>
+          <figure class="scene">
+            <img src="images/04-combat-goku-piccolo-raditz.webp" alt="Visuel d'attente pour l'alliance de Goku et Piccolo contre Raditz" width="1200" height="675" loading="lazy" decoding="async">
+            <figcaption><strong>Une alliance inattendue.</strong> Les anciens ennemis unissent leurs forces pour sauver Gohan.</figcaption>
+          </figure>
+        </div>
+        <div class="beat story-grid">
+          <div class="prose">
+            <h3>Une année pour devenir plus forts</h3>
+            <p>Deux autres Saiyans arrivent dans un an. Goku s'entraîne dans l'au-delà pour les affronter. Pendant ce temps, <strong>Piccolo prépare Gohan au combat</strong> et s'attache à lui : l'ancien ennemi devient un protecteur.</p>
+          </div>
+          <figure class="scene">
+            <img src="images/05-entrainement-goku-kaio.webp" alt="Goku s'entraîne dans l'au-delà" width="960" height="540" loading="lazy" decoding="async">
+            <figcaption><strong>Se préparer à l'impossible.</strong> Goku apprend à devenir plus fort.</figcaption>
+          </figure>
+        </div>
+        <div class="beat story-grid">
+          <div class="prose">
+            <h3>Le prince entre en scène</h3>
+            <p><strong>Vegeta</strong>, le prince des Saiyans, et <strong>Nappa</strong> attaquent la Terre. Plusieurs amis de Goku meurent, dont Piccolo qui se sacrifie pour Gohan. Sa mort fait aussi disparaître les Dragon Balls : impossible de ressusciter les victimes.</p>
+          </div>
+          <figure class="scene">
+            <img src="images/06-arrivee-vegeta-nappa.webp" alt="Vegeta et Nappa, les deux Saiyans venus attaquer la Terre" width="600" height="337" loading="lazy" decoding="async">
+            <figcaption><strong>L'échelle change.</strong> Vegeta et Nappa viennent de l'espace pour s'emparer des Dragon Balls.</figcaption>
+          </figure>
+          <div class="prose">
+            <p>Ramené à la vie avant la disparition des boules, <strong>Goku revient et bat Nappa</strong>. Vegeta est plus redoutable : il faut l'aide de ses amis pour le repousser. Goku choisit de l'épargner. C'est le début d'une longue rivalité.</p>
+          </div>
+          <figure class="scene">
+            <img src="images/07-premier-combat-goku-vegeta.webp" alt="Le premier affrontement entre Goku et Vegeta" width="1200" height="675" loading="lazy" decoding="async">
+            <figcaption><strong>Le début d'une rivalité.</strong> Il faut l'aide de ses amis pour que Goku repousse Vegeta.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <aside class="takeaway" data-reading><h3>Ce qu'il faut retenir</h3><p>Goku est un Saiyan élevé sur Terre. Gohan a un potentiel immense. Piccolo change de camp. Vegeta, lui, commence comme un ennemi très dangereux.</p></aside>
+      <div class="story-grid">
+        <aside class="facts relationship" aria-label="Les relations à retenir">
+          <div><strong>Goku → Gohan</strong><span>Le père et son fils.</span></div>
+          <div><strong>Piccolo → Gohan</strong><span>L'ancien ennemi devenu mentor protecteur.</span></div>
+          <div><strong>Vegeta ↔ Goku</strong><span>Deux Saiyans. Deux visions du monde.</span></div>
+        </aside>
+        <details class="facts"><summary>On peut mourir… et revenir ?</summary><p>Les Dragon Balls peuvent parfois ressusciter les morts, mais leurs vœux ont des limites. Les héros ne peuvent donc pas simplement compter sur la magie pour tout réparer.</p></details>
+      </div>
+    </section>
+
+    <section class="chapter wrap namek" id="namek" aria-labelledby="namek-title" data-chapter>
+      <div class="chapter-head"><span class="chapter-number" aria-hidden="true">03</span><p class="eyebrow">Namek &amp; Freezer · Dragon Ball Z</p><span class="duration">~2 minutes</span></div>
+      <h2 class="chapter-title" id="namek-title">Une planète verte.<br>Un tyran. Une légende.</h2>
+      <p class="deck">Pour sauver leurs amis, nos héros partent chercher d'autres Dragon Balls. Évidemment, ils ne sont pas les seuls.</p>
+      <div class="story-grid">
+        <div class="prose" data-reading>
+          <p>Pour ressusciter leurs amis, <strong>Bulma, Krilin et Gohan</strong> partent sur <strong>Namek</strong>, la planète d'origine de Piccolo. Elle possède aussi des Dragon Balls. Goku, blessé, les rejoindra plus tard.</p>
+        </div>
+        <figure class="scene">
+          <img src="images/08-voyage-vers-namek.webp" alt="Le Grand Doyen de Namek entouré de Gohan, Krilin et d'un guerrier Namek" width="1200" height="675" loading="lazy" decoding="async">
+          <figcaption><strong>Sur Namek.</strong> Gohan et Krilin cherchent de quoi sauver leurs amis.</figcaption>
+        </figure>
+        <div class="prose" data-reading>
+          <p>Ils y trouvent <strong>Freezer</strong>, un tyran qui fait régner la terreur dans l'espace. Lui aussi veut les boules : son but est de <strong>devenir immortel</strong>. Pour les obtenir, il massacre les habitants.</p>
+        </div>
+        <figure class="scene">
+          <img src="images/09-planete-namek.webp" alt="Le paysage de la planète Namek sous son ciel vert" width="716" height="403" loading="lazy" decoding="async">
+          <figcaption><strong>Namek.</strong> La planète d'origine de Piccolo, menacée par l'armée de Freezer.</figcaption>
+        </figure>
+        <div class="prose" data-reading>
+          <p><strong>Vegeta</strong> veut échapper à Freezer, son ancien maître. Il n'est pas encore l'ami des héros, mais ils vont devoir s'entraider : seuls, ils n'ont aucune chance de lui résister.</p>
+        </div>
+        <figure class="scene">
+          <img src="images/12-vegeta-sur-namek.webp" alt="Vegeta sur la planète Namek" width="1000" height="562" loading="lazy" decoding="async">
+          <figcaption><strong>Un allié de circonstance.</strong> Vegeta doit coopérer avec les héros face à Freezer.</figcaption>
+        </figure>
+      </div>
+      <div class="factions" aria-label="Les trois camps sur Namek">
+        <div class="faction"><p class="eyebrow">Les Terriens</p><h3>Ramener leurs amis</h3><p>Gohan, Krilin et Bulma veulent réparer les pertes de la bataille sur Terre.</p></div>
+        <div class="faction"><p class="eyebrow">Vegeta</p><h3>Ne plus subir Freezer</h3><p>Il poursuit son propre intérêt. Une alliance avec les héros reste possible… par nécessité.</p></div>
+        <div class="faction"><p class="eyebrow">Freezer</p><h3>Régner pour toujours</h3><p>L'immortalité rendrait son empire encore plus difficile à arrêter.</p></div>
+      </div>
+      <div class="story-grid">
+        <div class="prose" data-reading>
+          <p>Les héros utilisent les <strong>Dragon Balls de Namek</strong> pour ramener Piccolo à la vie. L'espoir de sauver leurs amis renaît, mais Freezer passe à l'attaque.</p>
+        </div>
+        <figure class="scene">
+          <img src="images/10-porunga-dragon-namek.webp" alt="Le dragon invoqué avec les Dragon Balls de Namek" width="750" height="421" loading="lazy" decoding="async">
+          <figcaption><strong>Un espoir de sauvetage.</strong> Les boules permettent de ramener leurs amis.</figcaption>
+        </figure>
+        <div class="prose" data-reading>
+          <p>Quand Goku rejoint ses amis, Freezer dévoile sa véritable puissance. Avant de mourir, Vegeta lui révèle que <strong>Freezer a détruit leur planète et presque tous les Saiyans</strong>. Le combat devient bien plus personnel.</p>
+        </div>
+        <figure class="scene">
+          <img src="images/13-transformations-freezer.webp" alt="Les différentes transformations de Freezer" width="900" height="506" loading="lazy" decoding="async">
+          <figcaption><strong>Une même menace.</strong> Freezer change de forme et gagne en puissance. L'apparence dorée vient de la suite.</figcaption>
+        </figure>
+      </div>
+      <p class="prose wide-story" data-reading>Goku affronte Freezer. Alors qu'il semble proche de la victoire, le tyran <strong>tue Krilin sous ses yeux</strong>. La mort de son meilleur ami provoque une colère immense.</p>
+      <aside class="moment awakening" id="transformation" aria-labelledby="transformation-title">
+        <div data-reading>
+          <p class="eyebrow">Le moment qui change tout</p>
+          <h3 id="transformation-title">Et soudain,<br>les cheveux deviennent dorés.</h3>
+          <p>Goku devient un <strong>Super Saiyan</strong> : ses cheveux deviennent dorés et sa puissance explose. C'est une transformation, la légende que Freezer redoutait.</p>
+          <ol class="awakening-steps" aria-label="Les étapes de la transformation">
+            <li>La colère</li>
+            <li>La puissance monte</li>
+            <li aria-current="step">Super Saiyan</li>
+          </ol>
+          <span class="scroll-hint" hidden>Fais défiler pour voir l'éveil <span aria-hidden="true">↓</span></span>
+        </div>
+        <div>
+          <figure class="scene">
+            <div class="awakening-art" id="transformation-art">
+              <img src="images/14-goku-super-saiyan.webp" alt="Goku transformé en Super Saiyan, les cheveux dorés" width="1120" height="630" loading="lazy" decoding="async">
+              <div class="awakening-aura" aria-hidden="true"></div>
+            </div>
+            <figcaption><strong>La légende prend vie.</strong> La mort de Krilin déclenche la première transformation de Goku.</figcaption>
+          </figure>
+          <section class="video-panel" id="transformation-video" aria-labelledby="transformation-video-title">
+            <h4 id="transformation-video-title">La scène en vidéo (VOSTFR)</h4>
+            <p id="transformation-video-note">Vidéo en ligne : une connexion Internet est nécessaire.</p>
+            <div class="video-player" id="transformation-video-player">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/obj1GFwRdo8?si=SKpdV6f86RCc4ygJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p><a href="https://www.youtube.com/watch?v=obj1GFwRdo8" target="_blank" rel="noopener">Ouvrir la vidéo sur YouTube (nouvel onglet)</a></p>
+          </section>
+        </div>
+      </aside>
+      <div class="story-grid">
+        <div class="prose" data-reading>
+          <p><strong>Goku bat Freezer.</strong> Les vœux permettent de sauver les victimes, dont Krilin. Goku s'échappe avant l'explosion de Namek. Ses amis sont sauvés, et l'aventure continue.</p>
+        </div>
+        <figure class="scene">
+          <img src="images/15-combat-final-goku-freezer.webp" alt="Freezer dans sa forme finale sur Namek" width="1200" height="675" loading="lazy" decoding="async">
+          <figcaption><strong>Le duel décisif.</strong> Goku prend l'avantage tandis que Namek menace d'exploser.</figcaption>
+        </figure>
+      </div>
+      <aside class="takeaway" data-reading><h3>Ce qu'il faut retenir</h3><p>Freezer a détruit le peuple de Goku et Vegeta. Sur Namek, l'ennemi d'hier devient un allié de circonstance. Et Goku réalise la légende du Super Saiyan pour défendre ceux qu'il aime.</p></aside>
+    </section>
+
+    <section class="chapter wrap" id="suite" aria-labelledby="suite-title" data-chapter>
+      <div class="chapter-head"><span class="chapter-number" aria-hidden="true">04</span><p class="eyebrow">Cell &amp; Boo · La suite en accéléré</p><span class="duration">~1 minute</span></div>
+      <h2 class="chapter-title" id="suite-title">Le monde grandit.<br>La famille aussi.</h2>
+      <p class="deck">Deux grandes menaces plus tard, nos héros ne sont plus tout à fait les mêmes. Voici l'essentiel, pas chaque combat.</p>
+      <div class="two-sagas">
+        <article class="saga-card">
+          <div class="saga-art">
+            <img src="images/16-saga-cell.webp" alt="La saga de Cell, où Gohan prend le relais de Goku" width="1200" height="675" loading="lazy" decoding="async">
+          </div>
+          <div class="saga-copy" data-reading>
+            <p class="eyebrow">D'abord · Cell</p>
+            <h3>Le fils prend le relais.</h3>
+            <p>Après Freezer, <strong>Cell</strong> menace la Terre. Ce monstre artificiel absorbe d'autres combattants pour devenir plus fort, puis défie les héros dans un tournoi.</p>
+            <p>Goku mise sur <strong>Gohan</strong>, son fils au potentiel immense. Gohan dépasse ses limites et finit par vaincre Cell. Goku s'est sacrifié pendant la bataille et choisit de rester dans l'au-delà.</p>
+            <p><strong>Le changement important :</strong> Gohan peut désormais protéger la Terre. Vegeta, lui, s'attache à la famille qu'il a fondée avec Bulma.</p>
+          </div>
+        </article>
+        <article class="saga-card">
+          <div class="saga-art">
+            <img src="images/17-saga-majin-buu.webp" alt="Majin Boo et Cell, les deux grandes menaces après Freezer" width="1200" height="675" loading="lazy" decoding="async">
+          </div>
+          <div class="saga-copy" data-reading>
+            <p class="eyebrow">Puis · Majin Boo</p>
+            <h3>Gagner, ensemble.</h3>
+            <p>Des années plus tard, <strong>Majin Boo</strong> apparaît : un monstre magique capable de se reformer après chaque attaque.</p>
+            <p>Goku revient aider ses amis. Vegeta se sacrifie pour protéger sa famille, mais même cela ne suffit pas à arrêter Boo.</p>
+            <p>Pour vaincre le Boo maléfique, Goku rassemble <strong>l'énergie de tous les Terriens</strong>. Vegeta l'aide au combat ; <strong>Mister Satan</strong> convainc les humains de participer. C'est une victoire collective.</p>
+            <p><strong>Le changement important :</strong> Goku revient définitivement à la vie et Vegeta sait coopérer. Une version bienveillante de Boo reste leur amie. La paix revient.</p>
+          </div>
+        </article>
+      </div>
+      <aside class="takeaway" data-reading><h3>Ce qui compte vraiment</h3><p>Les héros deviennent plus forts, mais gagnent surtout grâce à l'entraide, aux sacrifices et à la confiance.</p></aside>
+    </section>
+
+    <section class="cast wrap" id="personnages" aria-labelledby="cast-title">
+      <p class="eyebrow">Bonus · Qui est qui ?</p>
+      <h2 id="cast-title">La petite bande<br>à garder en tête.</h2>
+      <p class="cast-intro">Touche une fiche pour retrouver le rôle de chacun.</p>
+      <div class="cast-grid">
+        <details class="person"><summary><span class="avatar"><img src="images/personnages/portrait-goku.webp" alt="" width="458" height="458" loading="lazy" decoding="async"></span><span><span class="person-name">Goku</span><span class="person-role">Le héros · le père de Gohan</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Saiyan élevé sur Terre, père de Gohan et Goten. Il aime les défis, ses amis et les bons repas.</p></details>
+        <details class="person"><summary><span class="avatar"><img src="images/personnages/portrait-gohan.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span><span class="person-name">Gohan</span><span class="person-role">Le fils · le potentiel immense</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Fils de Goku et élève de Piccolo. Gentil et studieux, il cache une puissance immense.</p></details>
+        <details class="person"><summary><span class="avatar"><img src="images/personnages/portrait-vegeta.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span><span class="person-name">Vegeta</span><span class="person-role">Le prince · le rival de Goku</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Prince des Saiyans. D'abord ennemi de Goku, puis rival et allié. Compagnon de Bulma et père de Trunks.</p></details>
+        <details class="person"><summary><span class="avatar green"><img src="images/personnages/portrait-piccolo.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span><span class="person-name">Piccolo</span><span class="person-role">Le mentor · le protecteur vert</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Un Namek à la peau verte. Ancien ennemi devenu allié, il est le maître et le protecteur de Gohan.</p></details>
+        <details class="person"><summary><span class="avatar green"><img src="images/personnages/portrait-bulma.webp" alt="" width="458" height="458" loading="lazy" decoding="async"></span><span><span class="person-name">Bulma</span><span class="person-role">L'inventrice · le cerveau de l'équipe</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Inventrice du radar des Dragon Balls et amie de Goku. Compagne de Vegeta, elle est la mère de Trunks.</p></details>
+        <details class="person"><summary><span class="avatar"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#orbit"/></svg></span><span><span class="person-name">Krilin</span><span class="person-role">Le meilleur ami · le courage humain</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Le meilleur ami de Goku. Sa mort sur Namek déclenche la première transformation en Super Saiyan.</p></details>
+        <details class="person"><summary><span class="avatar green"><img src="images/personnages/portrait-krilin.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span><span class="person-name">Le Grand Doyen</span><span class="person-role">Le sage · les Dragon Balls de Namek</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Le sage de Namek, créateur des Dragon Balls de sa planète. Il aide les héros.</p></details>
+        <details class="person"><summary><span class="avatar"><img src="images/personnages/portrait-tortue-geniale.webp" alt="" width="458" height="458" loading="lazy" decoding="async"></span><span><span class="person-name">Tortue Géniale</span><span class="person-role">Le maître · les premiers entraînements</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Le premier maître de Goku et Krilin. Il leur enseigne les arts martiaux et le Kamé Hamé Ha.</p></details>
+        <details class="person"><summary><span class="avatar purple"><img src="images/personnages/portrait-freezer.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span><span><span class="person-name">Freezer</span><span class="person-role">Le tyran · l'ennemi sur Namek</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Le tyran qui a détruit la planète des Saiyans. Il cherche l'immortalité et affronte Goku sur Namek.</p></details>
+        <details class="person"><summary><span class="avatar"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#heart"/></svg></span><span><span class="person-name">Chichi</span><span class="person-role">La mère · le retour au quotidien</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Femme de Goku, mère de Gohan et Goten. Elle veille à leur sécurité et à leurs études.</p></details>
+        <details class="person"><summary><span class="avatar purple"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#clock"/></svg></span><span><span class="person-name">Trunks</span><span class="person-role">Le fils de Bulma et Vegeta</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Le fils de Bulma et Vegeta. Sa version adulte vient du futur ; enfant, il grandit avec Goten.</p></details>
+        <details class="person"><summary><span class="avatar purple"><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#heart"/></svg></span><span><span class="person-name">Boo &amp; Mister Satan</span><span class="person-role">Une amitié très inattendue</span></span><span class="expand" aria-hidden="true">+</span></summary><p>Mister Satan se lie d'amitié avec le Boo bienveillant. Il aide aussi Goku à obtenir l'énergie des Terriens.</p></details>
+      </div>
+    </section>
+
+    <section class="finish wrap" id="pret" aria-labelledby="finish-title">
+      <p class="eyebrow">Fin du guide · mission accomplie</p>
+      <h2 id="finish-title">Tu connais l'essentiel.<br>Bienvenue dans la bande.</h2>
+      <p>Pas besoin de retenir chaque nom. Garde cette idée : derrière les combats immenses, c'est l'histoire d'une famille un peu bizarre qui apprend à protéger son monde.</p>
+      <details class="facts recap">
+        <summary>La version « rappelle-moi tout en 30 secondes »</summary>
+        <ul>
+          <li><strong>Goku</strong> est un Saiyan élevé sur Terre. Gohan est son fils, Krilin son meilleur ami.</li>
+          <li><strong>Sept Dragon Balls</strong> permettent d'appeler un dragon et de faire des vœux.</li>
+          <li><strong>Piccolo</strong> et <strong>Vegeta</strong> sont d'anciens ennemis devenus des alliés.</li>
+          <li>Sur Namek, Goku bat <strong>Freezer</strong> et devient <strong>Super Saiyan</strong>.</li>
+          <li>Gohan bat <strong>Cell</strong>. Les héros viennent ensuite à bout du <strong>Boo maléfique</strong>.</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <p><strong>Un petit guide fait pour être découvert à deux.</strong><br>Récit rédigé pour les débutants, illustré avec les images et portraits du dossier local, ainsi que quelques emblèmes vectoriels symboliques.</p>
+        <p>Guide de fan non officiel. Dragon Ball est une œuvre d'Akira Toriyama ; les droits de l'œuvre et de son adaptation appartiennent à leurs titulaires respectifs.</p>
+        <span class="offline">Sans compte · sans publicité · fonctionne hors ligne</span>
+      </div>
+      <div>
+        <details>
+          <summary>Les sources, pour aller plus loin</summary>
+          <p>Les résumés ont été recoupés avec les ressources ci-dessous. Attention : ces pages détaillées peuvent dévoiler des événements au-delà des sagas racontées ici.</p>
+          <ul>
+            <li><a href="https://dragonballfr.com/catalog/sagas">DBFR · Les sagas de Dragon Ball</a></li>
+            <li><a href="https://dragonballfr.com/catalog/sagas/9">DBFR · La quête sur Namek</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Frieza" lang="en">Wikipedia · Frieza (en anglais)</a></li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
