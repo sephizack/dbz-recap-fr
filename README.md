@@ -88,7 +88,7 @@ Twitter Card : titre, description en français et image JPEG dédiée de
 Elles sont disponibles sans JavaScript et ne changent pas l'affichage du guide.
 
 L'adresse publique configurée est
-<https://public.sephizack.myds.me/apps/dbz-recap-fr/>. En cas de changement
+<https://sephizack.github.io/dbz-recap-fr/>. En cas de changement
 d'hébergement, mettre à jour les URL absolues dans la balise `canonical` et les
 métadonnées `og:url`, `og:image`, `og:image:secure_url` et `twitter:image`.
 Le HTML et le JPEG doivent être accessibles publiquement en HTTPS, sans
@@ -96,7 +96,7 @@ authentification ni blocage des robots de partage.
 
 WhatsApp choisit la présentation de l'aperçu et peut conserver une ancienne
 version en cache. Après publication, tester dans un nouveau message avec
-`https://public.sephizack.myds.me/apps/dbz-recap-fr/?v=2` pour demander un
+`https://sephizack.github.io/dbz-recap-fr/?v=2` pour demander un
 aperçu avec une URL distincte. Un message déjà envoyé ne sera pas forcément
 actualisé.
 
